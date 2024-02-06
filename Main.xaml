@@ -78,17 +78,9 @@
   <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="572,1392" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(x:String)" Name="UKCities" />
-      <Variable x:TypeArguments="scg:List(x:String)" Name="SpainCities">
-        <Variable.Default>
-          <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="new list (of String) From {&quot;MADRID&quot;,&quot;valencia&quot;,&quot;BARCELONA&quot;}" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new list (of String) From {&quot;MADRID&quot;,&quot;valencia&quot;,&quot;BARCELONA&quot;}]" Name="SpainCities" />
       <Variable x:TypeArguments="scg:List(x:String)" Name="AllCities" />
-      <Variable x:TypeArguments="scg:List(x:String)" Name="AllCitiesTitleCase">
-        <Variable.Default>
-          <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="new list (of String)" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new list (of String)]" Name="AllCitiesTitleCase" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -98,7 +90,7 @@
     <uasc:BuildCollection x:TypeArguments="x:String" Items="{x:Null}" DisplayName="Build Collection UKCities" FirstItem="London" sap:VirtualizedContainerService.HintSize="510,145.33333333333334" sap2010:WorkflowViewState.IdRef="BuildCollection`1_1" Result="[UKCities]">
       <uasc:BuildCollection.NextItems>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-          <InArgument x:TypeArguments="x:String">MANCHESTER</InArgument>
+          <InArgument x:TypeArguments="x:String">York</InArgument>
         </scg:List>
       </uasc:BuildCollection.NextItems>
     </uasc:BuildCollection>
